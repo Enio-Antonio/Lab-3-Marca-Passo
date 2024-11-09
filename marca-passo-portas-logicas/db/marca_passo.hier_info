@@ -1,0 +1,45 @@
+|marca_passo
+s => circuito:u2.s
+z => circuito:u2.z
+clk => registrador:u1.clk
+temp <= circuito:u2.temp
+pulso <= circuito:u2.pulso
+
+
+|marca_passo|registrador:u1
+clk => p2~reg0.CLK
+clk => p1~reg0.CLK
+e1 => p1~reg0.DATAIN
+e2 => p2~reg0.DATAIN
+p1 <= p1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+p2 <= p2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|marca_passo|circuito:u2
+e1 => pulso~0.IN0
+e1 => temp~0.IN0
+e1 => pestado1~0.IN0
+e2 => pestado1~0.IN1
+e2 => temp~0.IN1
+e2 => pulso~0.IN1
+s => temp~5.IN1
+s => pulso~5.IN1
+s => temp~1.IN1
+s => pulso~1.IN1
+s => pestado1~1.IN1
+z => temp~3.IN1
+z => temp~8.IN1
+z => pulso~3.IN1
+z => pulso~8.IN1
+z => pestado1~2.IN1
+z => temp~2.IN1
+z => temp~6.IN1
+z => pulso~2.IN1
+z => pulso~6.IN1
+z => pestado2~0.IN1
+temp <= temp~9.DB_MAX_OUTPUT_PORT_TYPE
+pulso <= pulso~9.DB_MAX_OUTPUT_PORT_TYPE
+pestado1 <= pestado1~2.DB_MAX_OUTPUT_PORT_TYPE
+pestado2 <= pestado2~1.DB_MAX_OUTPUT_PORT_TYPE
+
+
