@@ -1,0 +1,6 @@
+
+State Machine - |marca_passo|currentstate
+Name currentstate.contracao currentstate.espera currentstate.reset 
+currentstate.reset 0 0 0 
+currentstate.espera 0 1 1 
+currentstate.contracao 1 0 1 

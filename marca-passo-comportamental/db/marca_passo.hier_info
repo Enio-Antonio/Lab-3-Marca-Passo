@@ -1,0 +1,15 @@
+|marca_passo
+s => nextstate.contracao~3.IN1
+s => nextstate.contracao~2.OUTPUTSELECT
+s => nextstate.espera~0.OUTPUTSELECT
+s => Selector2.IN2
+s => combologic~0.IN0
+s => combologic~1.IN0
+z => combologic~1.IN1
+z => combologic~0.IN1
+temp <= temp~0.DB_MAX_OUTPUT_PORT_TYPE
+pulso <= pulso~0.DB_MAX_OUTPUT_PORT_TYPE
+clk => currentstate~5.DATAIN
+registrador => currentstate~9.DATAIN
+
+
